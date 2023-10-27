@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+    Home Page
+{% endblock %}
+{% block body %}
+     <div>
+         <center>
+            <img class="my_image image_padding" src="{% static 'img/banner.jpg' %}" alt="banner.jpg" width="1300px"; height="500px;">
+        </center>
+     </div>
+       <div>
+        <div>
+            <h1 class="text-center my_title"><u>Introduction</u></h1>
+            <p class="text-justify">Welcome to CEMP, where innovation, education, and engineering excellence converge to shape
+                the engineers of tomorrow. Nestled in a dynamic and forward-thinking academic environment, we are committed to
+                fostering the next generation of engineers and problem solvers. Our institution prides itself on a rich history
+                of academic achievements, cutting-edge research, and a relentless pursuit of excellence.</p>
+            <p class="text-justify"At CEMP, we believe that engineering is not just a profession; it's a calling. With a faculty of distinguished
+            experts, state-of-the-art facilities, and a curriculum that blends theoretical knowledge with hands-on experience,
+            we provide students with the tools and inspiration they need to become industry leaders and innovators.</p>
+            <p class="text-justify">Our mission is to prepare students to address the world's most pressing challenges,
+                from sustainable energy solutions to groundbreaking technological advancements. We encourage creativity,
+                critical thinking, and collaboration, empowering our students to think beyond boundaries and create solutions
+                that impact our society positively.</p>
+            <p class="text-justify">As we embark on this journey, we invite you to explore the limitless possibilities that
+                CEMP has to offer. Join us in transforming your dreams into reality, as we shape the engineers of the future,
+                one ingenious mind at a time."</p>
+            <p class="text-justify">This introduction should give prospective students and stakeholders an insight into the
+                college's vision, commitment to excellence, and its role in preparing students for successful careers in the
+                field of engineering.</p>
+        </div>
+        </div>
+{% endblock %}

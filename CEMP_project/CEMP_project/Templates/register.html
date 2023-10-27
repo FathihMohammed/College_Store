@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+    Register
+{% endblock %}
+{% block body %}
+<center>
+<div class="container">
+<div class="card">
+<div class="card-title"><h1><u>Registration</u></h1></div>
+<div class="card-body">
+    <form method="POST" action="" style="padding:4px; text-align:center;">
+    {% csrf_token %}
+    <input type="text" name="username" placeholder="Enter Username"><br><br>
+    <input type="password" name="password" placeholder="Password"><br><br>
+    <input type="password" name="password2" placeholder="Re-Enter Password"><br><br>
+    <a href="{% url 'CEMP_APP:login' %}"><input type="submit" name="sub"></a><br>
+</form>
+</div>
+</div>
+</div>
+</center>
+{% endblock %}

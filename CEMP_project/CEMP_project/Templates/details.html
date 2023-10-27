@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+    Details
+{% endblock %}
+{% block body %}
+<center>
+<div class="container">
+<div class="card">
+<div class="card-title"><h1 style="text-align:center;"><u>Fill in the details to continue:</u></h1></div>
+<div class="card-body">
+<form method="POST" action="" style="padding:4px; text-align:center;">
+    {% csrf_token %}
+    <input class="form-control form-control-lg" type="text" name="name" placeholder="Name" required><br><br>
+    <input class="form-control form-control-lg" type="date" name="dob" placeholder="Date of Birth" required><br><br>
+    <input class="form-control form-control-lg" type="number" name="age" placeholder="Age" required><br><br>
+    <label>Gender: </label>
+    <input type="radio" id="rd1" name="gender" value="Male">
+    <label for="rd1">Male</label>
+    <input type="radio" id="rd2" name="gender" value="Female">
+    <label for="rd2">Female</label><br><br>
+    <input class="form-control form-control-lg" type="number" name="phno" placeholder="Phone Number" required><br><br>
+    <input class="form-control form-control-lg" type="email" name="em" placeholder="Email ID" required><br><br>
+    <textarea class="form-control form-control-lg" rows="4" cols="50" name="address" placeholder="Address" required></textarea><br><br>
+    <div class="form-row align-items-center">
+        <div class="col-auto my-1">
+            <label class="mr-sm-2" for="inlineFormCustomSelect">Department</label>
+            <select class="form-select form-select-sm" id="inlineFormCustomSelect" required>
+                <option selected>Choose...</option>
+                {% for i in department %}
+                <option value="{{i.id}}">{{i.name}}</option>
+                {% endfor %}
+            </select>
+        </div>
+    </div><br><br>
+     <div class="form-row align-items-center">
+        <div class="col-auto my-1">
+            <label class="mr-sm-2" for="inlineForm">Course</label>
+            <select class="form-select form-select-sm" id="inlineForm" required>
+                <option selected>Choose...</option>
+                {% for i in course %}
+                <option value="{{i.id}}">{{i.c_name}}</option>
+                {% endfor %}
+            </select>
+        </div>
+    </div><br><br>
+     <div class="form-row align-items-center">
+        <div class="col-auto my-1">
+            <label class="mr-sm-2" for="select3">Purpose</label>
+            <select class="form-select form-select-sm" id="select3" required>
+                <option selected>Choose...</option>
+                <option value="1">Enquiry</option>
+                <option value="2">Place Order</option>
+                <option value="3">Return</option>
+            </select>
+        </div>
+    </div><br><br>
+    <label>Materials Provide:</label>
+        <input type="checkbox" value="1" id="flexCheckDefault">
+        <label class="form-check-label" for="flexCheckDefault">Notebooks</label>
+        <input type="checkbox" value="2" id="flexCheck">
+        <label class="form-check-label" for="flexCheck">Exam Papers</label>
+        <input type="checkbox" value="3" id="flexCheckChecked">
+        <label class="form-check-label" for="flexCheckChecked">Pen</label><br><br>
+    <button type="submit" class="btn btn-outline-success">Submit</button><br>
+    {% for msg in messages %}
+        {{msg}}<br>
+    Click <a href="/">here</a>to return to homepage
+    {% endfor %}
+</form>
+</div>
+</div>
+</div>
+</center>
+{% endblock %}

@@ -1,0 +1,38 @@
+{% load static %}
+<nav class="navbar navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">
+      <img src="{% static 'img/logo.png' %}" alt="Logo" width="50" height="50" class="d-inline-block align-text-top">
+    </a>
+      <ul class="nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/">Home</a>
+        </li>
+        {% if user.is_authenticated %}
+          <li style="padding:7px; color:blue;"}>Hello({{user.username}})</li>
+          <li class="nav-item">
+              <a class="nav-link" href="{% url 'CEMP_APP:logout' %}">Logout</a>
+          </li>
+        {% else %}
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'CEMP_APP:login' %}">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'CEMP_APP:register' %}">Register</a>
+        </li>
+        {% endif %}
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Department
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="https://en.wikipedia.org/wiki/Computer_science_and_engineering">Computer Science</a></li>
+            <li><a class="dropdown-item" href="https://en.wikipedia.org/wiki/Electrical_engineering">Electrical</a></li>
+            <li><a class="dropdown-item" href="https://en.wikipedia.org/wiki/Electronic_engineering">Electronics</a></li>
+            <li><a class="dropdown-item" href="https://en.wikipedia.org/wiki/Mechanical_engineering">Mechanical</a></li>
+            <li><a class="dropdown-item" href="https://en.wikipedia.org/wiki/Civil_engineering">Civil</a></li>
+          </ul>
+        </li>
+      </ul>
+  </div>
+</nav>

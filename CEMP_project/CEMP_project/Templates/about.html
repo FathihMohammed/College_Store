@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+    About
+{% endblock %}
+{% block body %}
+<h1 class="my_title" style="text-align:center"><u>Welcome to CEMP Campus Store</u></h1>
+
+<p class="text-justify">At CEMP Campus Store, we are proud to be your one-stop shop for all things college-related. Whether you're a student,
+alumni, faculty, or just a dedicated supporter of our institution, we have something for everyone.</p>
+<ul>
+<li>Apparel</li>
+    <p class="text-justify">Show your school spirit with our wide range of apparel options. From t-shirts and hoodies to jerseys
+    and hats, we have the latest styles and designs that will make you stand out on campus. Don't forget to check out our
+    limited-edition collections to commemorate special events and achievements.</p>
+<li>Textbooks and Course Materials</li>
+
+<p class="text-justify">We've got your academic needs covered. Find all the textbooks, workbooks, and study guides required
+    for your courses in one convenient place. We also offer digital and rental options to save you money while you excel
+    in your studies.</p>
+    <li>School Supplies</li>
+
+<p class="text-justify">Stock up on everything you need to succeed in the classroom. We carry a diverse selection of
+    stationery, notebooks, pens, and other essential supplies to keep you organized and ready for the semester ahead.</p>
+
+<li>Tech and Electronics</li>
+
+<p class="text-justify">Stay connected and prepared with our range of tech products. From laptops and tablets to headphones
+    and chargers, we offer the latest technology to support your academic journey.</p>
+
+<li>Dorm and Home Essentials</li>
+
+<p class="text-justify">Make your dorm or apartment feel like home. Discover a variety of bedding, decor, and kitchen
+    essentials to personalize your space and make it cozy and comfortable.</p>
+
+<li>School Pride and Memorabilia</li>
+
+<p class="text-justify">Take a piece of your college experience with you wherever you go. Explore our collection of
+    memorabilia, from mugs and pennants to keychains and custom school jewelry.</p>
+
+<li>Gifts and Accessories</li>
+
+<p class="text-justify">Looking for the perfect gift or a special treat for yourself? Our store is the ideal place to
+    find unique gifts and accessories, from bags and wallets to exclusive collectibles.</p>
+
+<li>Sales and Promotions</li>
+
+<p class="text-justify">Keep an eye on our ongoing sales and promotions to grab amazing deals on your favorite college
+    merchandise. Stay updated on our website or subscribe to our newsletter to never miss a bargain.</p>
+
+<li>Visit Us</li>
+
+<p class="text-justify">Come visit our physical store on campus and explore the full range of products we offer.
+    Our friendly and knowledgeable staff is always ready to assist you.</p>
+
+<li>Shop Online</li>
+
+<p class="text-justify">Can't make it to the store? No problem! Browse our online store 24/7 and have your purchases delivered to your doorstep.
+    We offer secure payment options and fast shipping.</p>
+
+<li>Stay Connected</li>
+
+<p class="text-justify">Follow us on social media for the latest updates, promotions, and contests. Share your college
+    pride with us using #CEMPStore.</p>
+</ul>
+
+<p class="text-justify">CEMP Campus Store is here to support you throughout your college journey. Thank you for choosing
+    us as your preferred destination for all things related to our beloved institution.</p>
+<center>
+    <a href="{% url 'CEMP_APP:details' %}"><button type="button" class="btn btn-outline-success">Join Us</button></a>
+</center>
+{% endblock %}
